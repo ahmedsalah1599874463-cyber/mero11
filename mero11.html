@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For Mirna ❤️</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      width: 340px;
+    }
+
+    img {
+      width: 220px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    p {
+      font-size: 16px;
+      color: #444;
+      margin-top: 10px;
+    }
+
+    .buttons {
+      position: relative;
+      height: 120px;
+      margin-top: 15px;
+    }
+
+    button {
+      padding: 12px 22px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+    }
+
+    #no {
+      background: #ccc;
+      color: #333;
+      left: 20px;
+      top: 0;
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <!-- GIF البداية -->
+    <img id="gif" src="https://media.giphy.com/media/v6aOjy0Qo1fIA/giphy.gif" alt="begging gif">
+
+    <!-- البداية بالإنجليزي -->
+    <h1 id="title">I love you ❤️</h1>
+
+    <p id="message">Will you be my Valentine? 🥺</p>
+
+    <div class="buttons">
+      <button id="no">No</button>
+      <button id="yes">Yes</button>
+    </div>
+
+    <footer>
+      Just a small website, but a very big question 💌
+    </footer>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+    const gif = document.getElementById("gif");
+    const title = document.getElementById("title");
+    const message = document.getElementById("message");
+
+    // زرار No بيهرب
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * 220;
+      const y = Math.random() * 80;
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+
+    // لما تدوس Yes
+    yesBtn.addEventListener("click", () => {
+      // GIF حب
+      gif.src = "https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif";
+
+      // رسالة حب
+      title.innerText = "I love you so much ❤️";
+      message.innerText =
+        "ميرنا ❤️\n" +
+        "مش موقع ولا هزار…\n" +
+        "أنا فعلًا بحبك،\n" +
+        " وفرحان قوي إنك وافقتي تكوني فالنتايني 🥰,\n"  +
+	"والله والله والله بحبك اووووي حب محدش ف الدنيا يتخيله ولا عارف اوصفه و بجد فرحان انك في حياتي يا ميروووو و يارب تفضلي دايما منوراها يا ست البنات ... بحبككك";
+    });
+  </script>
+
+</body>
+</html>
